@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #28a745;
+    --have-main: #218838;
+    --red-color: #dc3545;
+    --blue-color: #007bff;
+    --main-transition: all 0.5s;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    user-select: none;
+}
+
+section {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.todo-container {
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+.todo-container h1,
+.todo-container .add {
+    margin-bottom: 20px;
+}
+
+.todo-container .add {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.todo-container .add input,
+.todo-container .add button {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.todo-container .add input {
+    width: 100%;
+}
+
+.todo-container .add button {
+    background-color: var(--main-color);
+    color: white;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.todo-container .add button:hover {
+    background-color: var(--have-main);
+}
+
+.todo-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-container ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.todo-container ul li div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.todo-container ul .edit-btn,
+.todo-container ul .delete-btn {
+    cursor: pointer;
+    background: none;
+    border: none;
+    transition: var(--main-transition);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.todo-container ul .edit-btn {
+    color: var(--blue-color);
+}
+
+.todo-container ul .delete-btn {
+    color: var(--red-color);
+}
+
+.todo-container ul .edit-btn:first-child:hover {
+    background-color: var(--blue-color);
+    color: #fff;
+}
+
+.todo-container ul .delete-btn:last-child:hover {
+    background-color: var(--red-color);
+    color: #fff;
+}
